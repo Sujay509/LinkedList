@@ -22,13 +22,30 @@ public class LinkedList {
         else{
             Node current = head;
             while (current != null){
-                System.out.print(current.data+" - ");
+                System.out.print(current.data+" -> ");
                 current = current.next;
             }
 
         }
     }
 
+    public void addNodeAtStart(int data){
+        Node newNode = new Node(data);
 
-}
+        if (head == null){
+            head = newNode;
+            newNode.next = null;
+        }else{
+            Node temp = head;
+            head = newNode;
+            newNode.next = temp;
+        }
+
+    }
+
+
+  }
+
+
+
 
